@@ -1,6 +1,6 @@
 """
 distribution.py
-Author: <your name here>
+Author: Rain Liu
 Credit: <list sources used, if any>
 
 Assignment:
@@ -36,3 +36,13 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+import string
+string = input('Please enter a string of text (the bigger the better): ')
+print('The distribution of characters in "'+str(string)+'" is: ')
+Y=string.lower()
+X=len(string)
+Z=(Y.split()[::])
+V=Y[0:X]
+print(list(V))
+print(len(Z))
+print(list(Z[1]))
