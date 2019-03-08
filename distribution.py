@@ -37,12 +37,12 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 import string
-string = input('Please enter a string of text (the bigger the better): ')
-print('The distribution of characters in "'+str(string)+'" is: ')
-Y=string.lower()
-X=len(string)
-Z=(Y.split()[::])
+sentence = input('Please enter a string of text (the bigger the better): ')
+print('The distribution of characters in "'+str(sentence)+'" is: ')
+Y=sentence.lower()
+X=len(sentence)
 V=Y[0:X]
-print(list(V))
-print(len(Z))
-print(list(Z[1]))
+Q=sorted(V)
+N=(sentence.count(' '))
+L=list(Q[N+1::])
+print(L)
