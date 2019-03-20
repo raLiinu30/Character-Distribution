@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Rain Liu
-Credit: <list sources used, if any>
+Credit: Mr. Dennison, Mr. Healy, Miriam, https://pymotw.com/2/collections/counter.html, 
 
 Assignment:
 
@@ -42,17 +42,10 @@ from collections import Counter
 
 sentence = input('Please enter a string of text (the bigger the better): ')
 print('The distribution of characters in "'+str(sentence)+'" is: ')
-Y=sentence.lower()
-X=len(sentence)
-V=Y[0:X]
-Q=sorted(V)
-N=(sentence.count(' '))
-L=list(Q[N+1::])
-S=len(L)
-print(L)
 
+
+Y=sentence.lower()
 c = collections.Counter(Y)
-print(c)
 
 list(string.ascii_lowercase)
 
@@ -61,24 +54,24 @@ for x in c:
     if x in string.ascii_lowercase:
         n=c[x]
         mylist.append(x*n)
-print(mylist)
-"""
-sorted_list = sorted(mylist, key=len)
-E=sorted_list[::-1]
-"""
+
 E = mylist[:]
 
-print(E)
 
 for j in range(0, len(E)):
     for i in range(0, len(E)-1):
         if len(E[i]) == len(E[i+1]):
-            if E[i] < E[i+1]:
+            if E[i] > E[i+1]:
                 E[i], E[i+1] = E[i+1], E[i]
         elif len(E[i]) < len(E[i+1]):
             E[i], E[i+1] = E[i+1], E[i]
 
-print(E)
+R='\n'.join(E)
+print(R)
+
+'''for x in E:
+    print(x)'''
+
  
 
     
