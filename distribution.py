@@ -1,4 +1,4 @@
-"""
+    """
 distribution.py
 Author: Rain Liu
 Credit: <list sources used, if any>
@@ -37,6 +37,9 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 import string
+import collections 
+from collections import Counter
+
 sentence = input('Please enter a string of text (the bigger the better): ')
 print('The distribution of characters in "'+str(sentence)+'" is: ')
 Y=sentence.lower()
@@ -45,4 +48,37 @@ V=Y[0:X]
 Q=sorted(V)
 N=(sentence.count(' '))
 L=list(Q[N+1::])
+S=len(L)
 print(L)
+
+c = collections.Counter(Y)
+print(c)
+
+list(string.ascii_lowercase)
+
+mylist=[]
+for x in c:
+    if x in string.ascii_lowercase:
+        n=c[x]
+        mylist.append(x*n)
+print(mylist)
+"""
+sorted_list = sorted(mylist, key=len)
+E=sorted_list[::-1]
+"""
+E = mylist[:]
+
+print(E)
+
+
+for i in range(0, len(E)-1):
+    if len(E[i]) >= len(E[i+1]):
+        pass 
+    elif len(E[i]) < len(E[i+1]):
+        E[i], E[i+1] = E[i+1], E[i]
+
+print(E)
+ 
+
+    
+            
