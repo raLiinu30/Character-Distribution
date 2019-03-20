@@ -1,4 +1,4 @@
-    """
+"""
 distribution.py
 Author: Rain Liu
 Credit: <list sources used, if any>
@@ -70,12 +70,12 @@ E = mylist[:]
 
 print(E)
 
-
-for i in range(0, len(E)-1):
-    if len(E[i]) >= len(E[i+1]):
-        pass 
-    elif len(E[i]) < len(E[i+1]):
-        E[i], E[i+1] = E[i+1], E[i]
+for j in range(0, len(E)):
+    for i in range(0, len(E)-1):
+        if len(E[i]) >= len(E[i+1]):
+            pass 
+        elif len(E[i]) < len(E[i+1]):
+            E[i], E[i+1] = E[i+1], E[i]
 
 print(E)
  
