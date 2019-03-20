@@ -72,8 +72,9 @@ print(E)
 
 for j in range(0, len(E)):
     for i in range(0, len(E)-1):
-        if len(E[i]) >= len(E[i+1]):
-            pass 
+        if len(E[i]) == len(E[i+1]):
+            if E[i] < E[i+1]:
+                E[i], E[i+1] = E[i+1], E[i]
         elif len(E[i]) < len(E[i+1]):
             E[i], E[i+1] = E[i+1], E[i]
 
